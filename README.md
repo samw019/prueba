@@ -1,2 +1,2 @@
 # prueba.github.io
-prueba
+plantilla
