@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BNR - Guía Estudiantil IUB</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Guía para Nuevos Estudiantes</h1>
+    <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav id="menu">
+      <ul>
+        <li><button onclick="mostrarSeccion('inicio')">Inicio</button></li>
+        <li><button onclick="mostrarSeccion('mapa')">Mapa</button></li>
+        <li><button onclick="mostrarSeccion('quioscos')">Quioscos</button></li>
+        <li><button onclick="mostrarSeccion('contacto')">Contacto</button></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+
+  <main>
+    <section id="inicio" class="seccion visible">
+      <h2>Bienvenido a la IUB</h2>
+      <p>Esta aplicación te ayudará a ubicar fácilmente los bloques, salones, quioscos y más dentro del campus universitario.</p>
+    </section>
+
+    <section id="mapa" class="seccion oculto">
+      <h2>Mapa del Campus</h2>
+      <div class="mapa-placeholder">[Aquí irá el mapa interactivo]</div>
+    </section>
+
+    <section id="quioscos" class="seccion oculto">
+      <h2>Quioscos y Servicios</h2>
+      <ul>
+        <li>Alimentos y Bebidas</li>
+        <li>Fotocopiadoras</li>
+        <li>Atención Estudiantil</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="seccion oculto">
+      <h2>Contacto</h2>
+      <p>¿Tienes dudas? Escríbenos al correo institucional o acércate a la oficina de bienestar estudiantil.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto BNR &copy; 2025 - IUB</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
