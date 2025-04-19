@@ -30,12 +30,12 @@ header h1 {
 }
 
 /*NAVEGACIÓN*/
-nav ul {
-  display: flex;
-  justify-content: center;
+nav ul { /*es para corregir un error en el responsive mobile*/
+  display: none;
   list-style: none;
-  gap: 20px;
-  transition: all 0.3s ease;
+  padding: 0;
+  margin: 0;
+  position: absolute;
 }
 
 nav button {
@@ -53,7 +53,7 @@ nav button {
 nav button:hover {
   background-color: #005f99; /* Azul más oscuro al pasar el cursor */
   transform: scale(1.05);
-}
+} 
 
 nav button:active {
   transform: scale(0.95);
@@ -70,7 +70,7 @@ main {
 /*SECCIONES*/
 .seccion {
   display: none;
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .visible {
@@ -88,8 +88,7 @@ main {
   text-align: center;
   font-size: 1.1rem;
   color: #555;
-  border-radius: 10px;
-  animation: pulse 1.5s infinite;
+  border-radius: 10px; /*le quite la animación de parpadeo (infinity)*/
 }
 
 
@@ -127,7 +126,7 @@ footer {
   50% { transform: scale(1.05); }
 }
 
-/* Menú expansible para móviles */
+/* Menú de mobiles*/
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -169,58 +168,92 @@ footer {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Menú deslizante desde el botón */
-nav ul {
-  position: fixed;
-  bottom: -100%; /* Oculto inicialmente */
-  right: 20px;
-  width: 200px;
-  background-color: #007acc; /* Azul más oscuro */
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  padding: 20px 0;
-  gap: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: bottom 0.5s ease-in-out;
-  z-index: 9;
+/*para escritorio*/
+@media (min-width: 769px) {
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    background-color: transparent;
+    box-shadow: none;
+    position: static;
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  nav button {
+    background: #007acc;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  nav button:hover {
+    background-color: #005f99;
+    transform: scale(1.05);
+  }
+
+  nav button:active {
+    background-color: #004d80;
+    transform: scale(0.95);
+  }
 }
 
-nav ul.show {
-  bottom: 150px; /* Se despliega hacia arriba */
-}
+/*para mobiles*/
 
-nav button {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-nav button:hover {
-  background-color: white;
-  color: #007acc; /* Azul más oscuro */
-  transform: scale(1.1);
-}
-
-nav button:active {
-  transform: scale(0.95);
-}
-
-/* Solo para móviles aún en progreso*/
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   nav ul {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: -100%;
+    right: 20px;
+    width: 200px;
+    background-color: #007acc;
+    padding: 20px 0;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.5s ease-in-out;
+    z-index: 9;
+  }
+
+  nav ul.show {
     display: flex;
+    bottom: 150px;
+  }
+
+  nav button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  nav button:hover {
+    background-color: white;
+    color: #007acc;
+    transform: scale(1.1);
+  }
+
+  nav button:active {
+    transform: scale(0.95);
   }
 }
-
