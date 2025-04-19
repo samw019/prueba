@@ -24,3 +24,12 @@ function cerrar_Menu() {
     toggle.classList.remove('active');
   }
 }
+
+//Agrega cierre del menú al hacer clic fuera de él
+document.addEventListener('click', (event) => {
+  const menu = document.querySelector('#menu ul');
+  const toggle = document.getElementById('menuToggle');
+  if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+    cerrar_Menu();
+  }
+});

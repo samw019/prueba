@@ -27,6 +27,7 @@ header h1 {
   margin-bottom: 10px;
   font-size: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out; /*agregé una animación de desvanecimiento al título principal del encabezado */
 }
 
 /*NAVEGACIÓN*/
@@ -73,6 +74,10 @@ main {
   animation: fadeIn 0.3s ease-in-out;
 }
 
+.seccion h2 {
+  animation: slideDown 1s ease-in-out; /* una animación de deslizamiento hacia abajo a los encabezados de las secciones */
+}
+
 .visible {
   display: block;
 }
@@ -89,6 +94,7 @@ main {
   font-size: 1.1rem;
   color: #555;
   border-radius: 10px; /*le quite la animación de parpadeo (infinity)*/
+ 
 }
 
 /*pie de pag*/
@@ -102,6 +108,10 @@ footer {
   width: 100%;
   font-size: 0.95rem;
   animation: slideUp 0.5s ease-in-out;
+}
+
+footer p {
+  animation: fadeIn 1s ease-in-out; /*animación de desvanecimiento al texto del pie de página */
 }
 
 /*animaciones*/
@@ -144,10 +154,11 @@ footer {
 }
 
 .menu-toggle .bar {
+  display: block;
   height: 4px;
   width: 25px;
   background-color: white;
-  margin: 4px 0;
+  margin: 6px 0; /*Aumenta el margen para mayor separación de las barras de menú*/
   transition: all 0.3s ease;
 }
 
@@ -254,4 +265,21 @@ footer {
   nav button:active {
     transform: scale(0.95);
   }
+}
+
+button, a {
+  /*transición suave para los botones y enlaces al cambiar el color de fondo, el color del texto y el tamaño */
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+button:hover, a:hover {
+  /*efecto de hover que oscurece el fondo y aumenta ligeramente el tamaño */
+  background-color: #005f99; /* Azul más oscuro */
+  transform: scale(1.05);
+}
+
+button:active, a:active {
+  /*efecto de clic que oscurece aún más el fondo y reduce ligeramente el tamaño */
+  background-color: #004d80; /* Azul aún más oscuro */
+  transform: scale(0.95);
 }
