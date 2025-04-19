@@ -7,14 +7,14 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f8ff; /* Azul claro */
+  background-color: #f0f8ff; /*Azul claro*/
   color: #333;
   line-height: 1.6;
 }
 
 /*Encabezado*/
 header {
-  background-color: #007acc; /* Azul más oscuro */
+  background-color: #007acc; /*Azul más oscuro*/
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -39,7 +39,7 @@ nav ul { /*es para corregir un error en el responsive mobile*/
 }
 
 nav button {
-  background: #007acc; /* Azul más oscuro */
+  background: #007acc; /*Azul más oscuro*/
   border: none;
   color: #fff;
   font-weight: bold;
@@ -51,13 +51,13 @@ nav button {
 }
 
 nav button:hover {
-  background-color: #005f99; /* Azul más oscuro al pasar el cursor */
+  background-color: #005f99; /*Azul más oscuro al pasar el cursor*/
   transform: scale(1.05);
 } 
 
 nav button:active {
   transform: scale(0.95);
-  background-color: #004d80; /* Azul aún más oscuro al presionar */
+  background-color: #004d80; /*Azul aún más oscuro al presionar*/
 }
 
 /*CONTENIDO PRINCIPAL*/
@@ -82,8 +82,8 @@ main {
 }
 
 .mapa-placeholder {
-  background-color: #e6f7ff; /* Fondo azul claro */
-  border: 2px dashed #007acc; /* Azul */
+  background-color: #e6f7ff; /*Fondo azul claro*/
+  border: 2px dashed #007acc; /*Azul*/
   padding: 40px;
   text-align: center;
   font-size: 1.1rem;
@@ -91,12 +91,11 @@ main {
   border-radius: 10px; /*le quite la animación de parpadeo (infinity)*/
 }
 
-
 /*pie de pag*/
 footer {
   text-align: center;
   padding: 15px;
-  background-color: #007acc; /* Azul más oscuro */
+  background-color: #007acc; /*Azul más oscuro*/
   color: white;
   position: fixed;
   bottom: 0;
@@ -126,16 +125,16 @@ footer {
   50% { transform: scale(1.05); }
 }
 
-/* Menú de mobiles*/
+/*Menú de mobiles*/
 .menu-toggle {
   display: none;
   cursor: pointer;
   width: 60px;
   height: 60px;
-  background-color: #007acc; /* Azul más oscuro */
+  background-color: #007acc; /*Azul más oscuro*/
   border-radius: 50%;
   position: fixed;
-  bottom: 80px; /* Por encima del pie de página */
+  bottom: 80px; /*Por encima del pie de página*/
   right: 20px;
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -153,7 +152,7 @@ footer {
 }
 
 .menu-toggle.active {
-  background-color: #005f99; /* Azul más oscuro al activarse */
+  background-color: #005f99; /*Azul más oscuro al activarse*/
 }
 
 .menu-toggle.active .bar:nth-child(1) {
@@ -206,7 +205,6 @@ footer {
 }
 
 /*para mobiles*/
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
